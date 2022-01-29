@@ -1,0 +1,25 @@
+.foto_perfil{
+    height:100%;
+    width:auto;
+    max-width: 100%;
+    border-radius:50%;
+    border:8px solid #0082ec28;
+}
+
+#conhecimentos{
+    margin-bottom:40px;
+}
+
+.corPrimaria{
+    background-color: #0082ec;
+}
+
+#corSobreMim{
+    color: rgba(255, 255, 255, 0.774);
+}
+
+.footer{
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+}

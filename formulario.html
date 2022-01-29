@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Fluig</title>
+
+    <link rel="shortcut icon" href="/PORTFOLIO/ICONS/totvs_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/PORTFOLIO/CSS/home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh4IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3249062fd6.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!--BARRA CIMA-->
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color:#0082ec">
+        <a class="navbar-brand" style=color:white>Formulário Fluig - Start TOTVS IP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+            aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+            <ul class="navbar-nav">
+                <li>
+                    <a href="index.html" class="nav-link" style=color:white>Home</a>
+                </li>
+                <li>
+                    <a href="formulario.html" class="nav-link" style=color:white>Formulário</a>
+                </li>
+                <li>
+                    <a href="fluig.html" class="nav-link" style=color:white>Fluig</a>
+                </li>
+                <li>
+                    <a href="blog.html" class="nav-link" style=color:white>Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0082ec70;"></nav>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0082ec28;"></nav>
+    <!--FIM-->
+
+    <br>
+    <br>
+
+    <!--RELATORIO DE DESPESAS panel-->
+    <div class="container bg-light">
+        <h1 class="text-center display-4 p-2">Relatório de Despesas</h1>
+    </div>
+
+    <br>
+    <br>
+
+    <!--SOLICITANTE-->
+    <h3 class="text-center">Solicitante</h3>
+
+    <!--FORM GERAL-->
+    <form id="formgeral">
+
+        <div class="card container">
+
+
+            <br>
+            <div class="form-group">
+                <label for="solicitante">Solicitante</label>
+                <input type="text" class="form-control" id="solicitante" name="solicitante"
+                    placeholder="Escreva seu nome" required maxlength="50" minlength="2">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com" required
+                    maxlength="40">
+            </div>
+
+            <div class="form-group">
+                <label for="empresa">Empresa</label>
+                <input type="text" class="form-control" id="empresa" name="empresa"
+                    placeholder="Escreva o nome da empresa" required maxlength="30" minlength="1">
+            </div>
+
+            <div class="form-group">
+                <label for="area">Área</label>
+                <input type="text" class="form-control" id="area" name="area" placeholder="Escreva sua área" required
+                    maxlength="30" minlength="3">
+            </div>
+            <br>
+
+        </div>
+
+        <br> <br>
+
+
+
+        <!--DESPESAS-->
+        <div class="container">
+
+            <h3 class="text-center">Despesas</h3>
+            <div class="text-right">
+                <a class="btn btn-success btn-lg" href="javascript:void(0)" id="addInput">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    + Incluir
+                </a>
+            </div>
+        </div>
+
+        <div class="card container">
+
+
+            <br>
+
+            <!--ADCIONANDO-->
+            <div class="container">
+
+                <!--DYNAMIC ADD-->
+                <div id="dynamicDiv">
+
+                    <div class="row adsakdj" id="linha">
+
+                        <!--DYNAMIC REMOVE-->
+                        <div id="dynamicDiv">
+                            <div class="mt-4 ml-2 mr-2">
+                                <p>
+                                    <a class="btn btn-danger" href="javascript:void(0)" id="remInput" onclick="acao()">
+                                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                                        X
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-2 mb-3">
+                            <label for="country">Categoria</label>
+                            <select class="custom-select d-block w-100" id="categoria" required>
+                                <option value="">Escolha...</option>
+                                <option>Pedágio</option>
+                                <option>Hospedagem</option>
+                                <option>Combustível</option>
+                                <option>Alimentação</option>
+                                <option>Outra</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="descricao">Descrição</label>
+                            <input type="text" class="form-control" id="descricao" required>
+                        </div>
+
+
+                        <div class="form-class col-md-2">
+                            <label for="vlr_unitario">Vlr. Unitário</label>
+                            <div class="input-group">
+                                <input type="text" min="0.00" step="0.05" value="" id="vlr_unitario" name="vlr_unitario"
+                                    class="form-control" placeholder="R$" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-1">
+                            <label for="qtdade">Qtd</label>
+                            <input type="text" class="form-control" id="qtdade" name="qtdade" onblur="teste()" required>
+                        </div>
+
+
+                        <div class="form-class col-md-2">
+                            <label for="valorTotal">Vlr. Total</label>
+                            <div class="input-group">
+                                <input type="text" value="" id="valorTotal" name="valorTotal" class="form-control"
+                                    placeholder="R$" readonly>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--FIM LINHA01-->
+                </div>
+            </div>
+
+        </div>
+
+        <!--BOTAO ENVIAR-->
+        <br>
+        <div class="container text-right">
+            <button class="btn btn-warning btn-lg" type="reset">Limpar</button>
+            <button class="btn btn-danger btn-lg" type="button">Cancelar</button>
+            <button class="btn btn-success btn-lg" type="submit" onclick="valida()" value="exibir alert">Enviar</button>
+
+            <div class="container total">
+                <div class="text-right">
+                    <div class="form-group col-md-2">
+                        <h5 for="totalGeral">Total Geral</h5>
+                        <input type="text" class="form-control" id="totalGeral" name="totalGeral" readonly>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--GERAL FIM-->
+    </form>
+
+
+
+    
+    <br>
+    <footer class="footer pb-3 bg-primary">
+
+        <div class="container text-center">
+
+            <div id="redes03" class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 fa-2x">
+                <a href="https://www.instagram.com/totvsip/"> <i class="fab fa-instagram" style="color:white"></i> </a>
+                <a href="https://www.linkedin.com/company/totvsip/"><i class="fab fa-linkedin" style="color:white"></i> </a>
+                <a href="https://www.facebook.com/totvsip"> <i class="fab fa-facebook" style="color:white"></i> </a>
+                <a href="https://twitter.com/Oficial_TOTVSIP"> <i class="fab fa-twitter" style="color:white"></i> </a>
+            </div>
+
+            <span class="text-light">Projeto realizado através do curso Start-TOTVS IP</span>
+
+        </div>
+    </footer>
+
+
+    <!--JAVASCRIPT-->
+    <script src="/PORTFOLIO/javascript/formulario.js"></script>
+
+</body>
+
+</html>
